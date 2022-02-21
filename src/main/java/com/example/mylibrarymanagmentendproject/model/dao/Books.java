@@ -1,4 +1,4 @@
-package Model.dao;
+package com.example.mylibrarymanagmentendproject.model.dao;
 
 import lombok.*;
 
@@ -16,19 +16,20 @@ public class Books {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Long id;
-    @Column(name = "copy_id", nullable = false)
-    private Long copyId;
+    @Column(name = "copies", nullable = false)
+    private int  copies;
     @Column(unique = true, length = 13)
     private Long ISBN;
-    @Column(name = "cover")
-    private String cover;
     @Column(name = "author")
     private String author;
     @Column(name = "tittle")
     private String tittle;
     @Column(name = "genre")
     private String genre;
-    @Column(name= "accessibile")
-    private boolean accessibility;
+    @Column(name= "access")
+    private boolean access;
+    @Column(name= "returned")
+    private boolean returned;
+
 
 }

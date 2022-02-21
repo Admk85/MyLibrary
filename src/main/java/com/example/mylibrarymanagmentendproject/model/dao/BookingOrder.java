@@ -1,8 +1,9 @@
-package Model.dao;
+package com.example.mylibrarymanagmentendproject.model.dao;
 import lombok.*;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.sql.Date;
+import java.time.LocalDateTime;
 
 
 @Getter
@@ -12,7 +13,7 @@ import java.sql.Date;
 @AllArgsConstructor
 @Entity
 @Table(name="libraryOrders")
-public class Orders {
+public class BookingOrder {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,19 +22,17 @@ public class Orders {
     @ManyToOne
     private Books books;
     @ManyToOne
-    private Library libraryId;
+    private Library library;
     @ManyToOne
     private User user;
     @Column(name = "booking_start_date")
     @NotNull
-    private Date bookingStarDate;
+    private LocalDateTime bookingStarDate;
     @Column(name = "bookingEndDate")
     @NotNull
-    private Date bookingEndDate;
-    @Column(name= "returned")
-    private Integer  returned;
-
-
-
+    private LocalDateTime bookingEndDate;
+    @NotNull
+    @Column(name = "returnDate")
+    private LocalDateTime returnsDate;
 
 }

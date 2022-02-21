@@ -1,11 +1,15 @@
-package Service;
+package com.example.mylibrarymanagmentendproject.service;
 
-import Model.dao.User;
-import Repository.UserRepository;
+import com.example.mylibrarymanagmentendproject.model.dao.User;
+import com.example.mylibrarymanagmentendproject.model.dto.UserRequest;
+import com.example.mylibrarymanagmentendproject.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.sql.Date;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,37 +18,46 @@ import java.util.List;
 @RequiredArgsConstructor
 public class UserService {
 
-    @Autowired
-    UserRepository userRepository;
 
-   public void  save(User user){
-       userRepository.save(user);
+     private final  UserRepository userRepository;
+     private final PasswordEncoder encoder;
+
+    public List<User> getAllUser(){
+       return userRepository.findAll();
+    }
+
+    public void saveUser(UserRequest userRequest){
+        User user=new User();
+        user.setUserName("USER1");
+        user.setPassword(encoder.encode("encoder"));
+        user.setRegisterDate( LocalDateTime.now());
+        user.setModifyDate(user.getModifyDate());
+         userRepository.save(user);
 
     }
 
-    public List<User> findAll() {
-        return (List<User>) userRepository.findAll();
-    }
+    public User modifyDate(User user) {
+        user.setRegisterDate( LocalDateTime.now());
+        return userRepository.save(user);
 
+    }
+    public void delete(Long UserId)
+    { userRepository.deleteById(UserId);
+
+    }
     public void saveById(Long Userid) {
         User users = userRepository.getById(Userid);
         userRepository.save(users);
-
     }
-
-    public User findByUserId(Long UserId) {
-        User user = userRepository.findById(UserId).get();
+    public User getByUserId(Long userId) {
+        User user = userRepository.findById(userId).get();
         return user;
-
     }
-
     public void saveByUserCardID(Long UserCardID) {
         User user = userRepository.getById(UserCardID);
         userRepository.save(user);
-
     }
-
-    public User searchByUserCardID(Long UserCardID) {
+    public User getByUserCardID(Long UserCardID) {
         User user = userRepository.findById(UserCardID).get();
         return user;
     }
@@ -55,18 +68,15 @@ public class UserService {
             if (user.getFirstname().toLowerCase().contains(firstname.toLowerCase())) {
                 users.add(user);
             }
-        }
-        return users;
+        }return users;
     }
-
     public List<User> getBySurname(String surname) {
         List<User> users = new ArrayList<>();
         for (User user : userRepository.findAll()) {
             if (user.getSurname().toLowerCase().contains(surname.toLowerCase())) {
                 users.add(user);
             }
-        }
-        return users;
+        }return users;
     }
 
     public List<User> getByEmail(String email) {
@@ -75,8 +85,7 @@ public class UserService {
             if (user.getEmail().toLowerCase().contains(email.toLowerCase())) {
                 users.add(user);
             }
-        }
-        return users;
+        }return users;
     }
 
     public List<User> getByFirstnameAndSurname(String firstname, String surname) {
@@ -86,10 +95,12 @@ public class UserService {
                     user.getSurname().toLowerCase().contains(surname.toLowerCase())) {
                 users.add(user);
             }
-        }
-        return users;
-    }
+        }return users;
+
 }
+
+    }
+
 
 
 
