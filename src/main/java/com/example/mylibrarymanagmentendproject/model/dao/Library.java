@@ -28,5 +28,6 @@ public class Library {
     @Column(name = "telephone")
     private String telephone;
     @Column(name= "opening_hours")
-    private Date date ;
+    private Date date ; //czasem jest to LocalDateTime, czasem Date, warto ujednolicic, dodatkowo to bardziej godzina
+    //otwarcia niz godziny otwarcia; przydaloby sie godzina otwarcia i godzina zamkniecia
 }

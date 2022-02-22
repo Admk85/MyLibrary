@@ -11,13 +11,13 @@ import java.util.List;
 @RequiredArgsConstructor
 public class BookingService {
 
-    private final BookingRepository OrRepo;
+    private final BookingRepository OrRepo; //nazwa zmiennej z malej litery
 
     public void saveBooking(BookingOrder bookingOrder) {
         OrRepo.save(bookingOrder);
     }
 
-    public void saveById(Long bookingId) {
+    public void saveById(Long bookingId) { //ta metoda troche bez sensu, bo ona wyciaga cos z bazy, po czym zapisuje to z powrotem, wiec nie ma tutaj zadnej zmiany
         BookingOrder bookingOrder = OrRepo.getById(bookingId);
         OrRepo.save(bookingOrder);
     }
@@ -25,8 +25,9 @@ public class BookingService {
     public BookingOrder get(Long bookingId) {
         return OrRepo.findById(bookingId).get();
     }
+
     public List<BookingOrder> getAll() {
-        List<BookingOrder> bookingOrder = (ArrayList<BookingOrder>) OrRepo.findAll();
+        List<BookingOrder> bookingOrder = (ArrayList<BookingOrder>) OrRepo.findAll(); //rzutowanie niepotrzebne, wystarczy orRepo.findAll();
         return bookingOrder;
     }
 

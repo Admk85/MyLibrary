@@ -10,14 +10,14 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name="books")
+@Table(name="books") //tabelka nazywa sie books, i to jest jak najbardziej ok, ale pojedynczy wpis moze sie nazywac Book a nie Books ;)
 public class Books {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Long id;
     @Column(name = "copies", nullable = false)
-    private int  copies;
+    private int copies;
     @Column(unique = true, length = 13)
     private Long ISBN;
     @Column(name = "author")
@@ -26,9 +26,9 @@ public class Books {
     private String tittle;
     @Column(name = "genre")
     private String genre;
-    @Column(name= "access")
+    @Column(name= "access") //moze availability (dostepnosc) zamiast access (bardziej dostep - uprawnienie)
     private boolean access;
-    @Column(name= "returned")
+    @Column(name= "returned") //jak dla mnie returned będzie zawsze == !access, w takim razie jednej mozna sie pozbyc ?
     private boolean returned;
 
 

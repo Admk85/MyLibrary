@@ -26,7 +26,7 @@ public class UserService {
        return userRepository.findAll();
     }
 
-    public void saveUser(UserRequest userRequest){
+    public void saveUser(UserRequest userRequest){ //brak userRequest w kodzie, czy na pewno wszystko wrzucone na branch?
         User user=new User();
         user.setUserName("USER1");
         user.setPassword(encoder.encode("encoder"));

@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name="libraryOrders")
+@Table(name="libraryOrders") //zgodnie z konwencją bazodanową, tabela powinna mieć nazwę LIBRARY_ORDERS (z "podłogą")
 public class BookingOrder {
 
     @Id
@@ -27,7 +27,7 @@ public class BookingOrder {
     private User user;
     @Column(name = "booking_start_date")
     @NotNull
-    private LocalDateTime bookingStarDate;
+    private LocalDateTime bookingStarDate; //nie wykluczam ze bedzie tu brakowac jakiegos convertera, ale sprawdzimy jak juz odpalimy
     @Column(name = "bookingEndDate")
     @NotNull
     private LocalDateTime bookingEndDate;
