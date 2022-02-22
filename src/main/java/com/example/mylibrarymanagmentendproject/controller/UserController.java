@@ -20,17 +20,13 @@ public class UserController {
     private final UserService userService;
     private UserRepository userRepository;
 
-    @RequestMapping(name = "memberTypes")
-    public List<String> memberTypes() {
-        return Roles.MEMBER_TYPES;
 
-    }
 
     @RequestMapping(value = "/add", method = RequestMethod.GET
     )
     public String addUser(Model model) {
         model.addAttribute("user", new User());
-        return "/user/new-user";
+        return "/user/add";
 
     }
     @RequestMapping(value = "/edit/{id}", method = RequestMethod.GET)
@@ -49,12 +45,11 @@ public class UserController {
             List<User> listOFUsers = userRepository.findAll();
             model.addAttribute("listOFUsers", listOFUsers);
             return "show";
-
         }
     @RequestMapping(value = "/deleteUser/{id}", method = RequestMethod.GET)
     public String deleteUser(@Valid @PathVariable("id") Long id){
         userRepository.deleteById(id);
-        return "redirect:/show";
+        return "redirect:/deleteUser";
     }
 }
 
