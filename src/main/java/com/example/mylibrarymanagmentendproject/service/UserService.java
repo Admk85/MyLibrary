@@ -26,7 +26,7 @@ public class UserService {
        return userRepository.findAll();
     }
 
-    public void saveUser(UserRequest userRequest){
+    public void addUser(UserRequest userRequest){
         User user=new User();
         user.setUserName("USER1");
         user.setPassword(encoder.encode("encoder"));
