@@ -19,7 +19,7 @@ public class Books {
     @Column(name = "copies", nullable = false)
     private int  copies;
     @Column(unique = true, length = 13)
-    private Long ISBN;
+    private String ISBN;
     @Column(name = "author")
     private String author;
     @Column(name = "tittle")

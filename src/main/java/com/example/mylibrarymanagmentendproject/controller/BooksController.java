@@ -23,8 +23,8 @@ public class BooksController {
         return bookService.getAll();
     }
 
-    @RequestMapping(method = RequestMethod.POST)
-    public void addBooks(@RequestBody Books books) {
+    @RequestMapping(value = "/save", method = RequestMethod.POST)
+    public void save(@RequestBody Books books) {
         bookService.save(books);
     }
 
@@ -41,9 +41,7 @@ public class BooksController {
     @RequestMapping(value = "/availability", method = RequestMethod.GET)
     public List<Books> getAvailability(@RequestAttribute("availability") boolean availability) {
         return bookService.getAvailability(true);
-
     }
-
     @RequestMapping(value = "/author", method = RequestMethod.GET)
     public List<Books> getBooksByAuthor(String  author) {
         return bookService.getBooksByAuthor(author);

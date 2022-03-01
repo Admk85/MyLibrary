@@ -7,7 +7,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -25,7 +24,7 @@ public class UserService {
     public List<User> addUser(UserRequest userRequest) {
         User user = new User();
         userRequest.setPesel(UUID.randomUUID().toString());
-        user.setUserName("USER1");
+        user.setUserName("Jasiek");
         user.setPassword(encoder.encode("encoder"));
         user.setRegisterDate(LocalDateTime.now());
         user.setModifyDate(user.getModifyDate());

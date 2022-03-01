@@ -1,5 +1,6 @@
 package com.example.mylibrarymanagmentendproject.controller;
 import com.example.mylibrarymanagmentendproject.model.dao.BookingOrder;
+import com.example.mylibrarymanagmentendproject.model.dto.BookRequest;
 import com.example.mylibrarymanagmentendproject.service.BookingService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -27,8 +28,8 @@ public class BookingController {
     }
 
     @RequestMapping(value = "/save-booking", method = RequestMethod.POST)
-    public ResponseEntity<BookingOrder> addBooking(@RequestBody BookingOrder bookingOrder) {
-        BookingOrder bookingOrder1 = service.addBooking(bookingOrder);
+    public ResponseEntity<BookingOrder> addBooking(@RequestBody BookRequest bookRequest) {
+        BookingOrder bookingOrder1 = service.addBooking(bookRequest);
         return new ResponseEntity<>(bookingOrder1, HttpStatus.CREATED);
     }
 

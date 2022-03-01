@@ -31,7 +31,7 @@ public class User {
     @Column(name = "town")
     private String town;
     @Column(name="postcode")
-    private int  postcode;
+    private Long  postcode;
     @Column(name = "address")
     private String address;
     @Column(name="telephone")

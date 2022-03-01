@@ -51,8 +51,8 @@ public class BookDataInitialize implements CommandLineRunner {
                     Books books = new Books();
                     books.setISBN(x.getISBN());
                     books.setTittle(x.getTittle());
-                    books.setAuthor(x.getTittle());
-                    books.setAvailability(x.isCompleted());
+                    books.setAuthor(x.getAuthor());
+                    books.setAvailability(x.isAvailability());
                     return books;
 
                 })

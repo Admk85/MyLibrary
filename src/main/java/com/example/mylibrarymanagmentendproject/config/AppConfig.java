@@ -21,9 +21,9 @@ public class AppConfig {
     @Bean
     public Map<Long, Books> initialData() {
         HashMap<Long, Books> map = new HashMap();
-        Books b1 = new Books(1L, 2, 4634574358L, "Steven Erikson", "Władca Ciemności"
+        Books b1 = new Books(1L, 2, "594837583", "Steven Erikson", "Władca Ciemności"
                 , "fantasy", true );
-        Books b2 = new Books(2L, 1, 4644533358L, "Alfred Hitchcock", "Ptaki",
+        Books b2 = new Books(2L, 1, "243564465", "Alfred Hitchcock", "Ptaki",
                 "horror", false);
         map.put(1L, b1);
         map.put(2L, b2);

@@ -1,11 +1,11 @@
 package com.example.mylibrarymanagmentendproject.service;
 import com.example.mylibrarymanagmentendproject.model.dao.BookingOrder;
+import com.example.mylibrarymanagmentendproject.model.dao.User;
+import com.example.mylibrarymanagmentendproject.model.dto.BookRequest;
 import com.example.mylibrarymanagmentendproject.repository.BookingRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-
 import java.time.LocalDateTime;
-import java.util.List;
 
 @Service
 @RequiredArgsConstructor
@@ -14,13 +14,16 @@ public class BookingService {
     private final BookingRepository orpo;
 
 
-    public BookingOrder addBooking(BookingOrder bookingOrder) {
-        bookingOrder.getBooks();
-        bookingOrder.getUser();
-        bookingOrder.setBookingStarDate(LocalDateTime.now());
-        bookingOrder.setBookingEndDate(LocalDateTime.now());
-        bookingOrder.setId(1L);
-        bookingOrder.getLibrary();
+    public BookingOrder addBooking(BookRequest bookRequest) {
+        BookingOrder bookingOrder=new BookingOrder();
+        User user = new User();
+        bookRequest.setISBN("");
+        bookRequest.setAuthor("");
+        bookRequest.setTittle("");
+        user.setUserName("");
+        bookRequest.setBookingStarDate(LocalDateTime.now());
+        bookRequest.setBookingEndDate(LocalDateTime.now());
+        bookRequest.setReturnsDate(LocalDateTime.now());
         return orpo.save(bookingOrder);
     }
 
