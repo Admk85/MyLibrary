@@ -26,10 +26,9 @@ public class Books {
     private String tittle;
     @Column(name = "genre")
     private String genre;
-    @Column(name= "access")
-    private boolean access;
-    @Column(name= "returned")
-    private boolean returned;
+    @Column(name= "availability ")
+    private boolean availability ;
+
 
 
 }

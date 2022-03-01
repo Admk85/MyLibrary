@@ -1,6 +1,5 @@
 package com.example.mylibrarymanagmentendproject.config;
 
-import com.example.mylibrarymanagmentendproject.model.dao.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;

@@ -4,6 +4,8 @@ import lombok.*;
 
 import javax.persistence.*;
 import java.sql.Date;
+import java.time.LocalDateTime;
+
 @Getter
 @Setter
 @Builder
@@ -28,5 +30,7 @@ public class Library {
     @Column(name = "telephone")
     private String telephone;
     @Column(name= "opening_hours")
-    private Date date ;
+    private LocalDateTime opening_hour ;
+    @Column(name= "close_hours")
+    private LocalDateTime close_hour ;
 }

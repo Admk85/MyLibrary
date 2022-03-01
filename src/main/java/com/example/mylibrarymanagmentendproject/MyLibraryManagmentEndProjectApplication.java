@@ -9,5 +9,4 @@ public class MyLibraryManagmentEndProjectApplication {
     public static void main(String[] args) {
         SpringApplication.run(MyLibraryManagmentEndProjectApplication.class, args);
     }
-
 }

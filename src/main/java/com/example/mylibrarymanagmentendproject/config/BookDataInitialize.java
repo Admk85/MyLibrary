@@ -5,7 +5,6 @@ import com.example.mylibrarymanagmentendproject.model.dao.Books;
 import com.example.mylibrarymanagmentendproject.model.dao.User;
 import com.example.mylibrarymanagmentendproject.model.dto.BookResponse;
 import com.example.mylibrarymanagmentendproject.repository.BookRepository;
-import com.example.mylibrarymanagmentendproject.repository.BookingRepository;
 import com.example.mylibrarymanagmentendproject.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -22,7 +21,7 @@ import java.util.Collections;
 
 @Component
 @Order(2)
-public class BookingDataInitialize implements CommandLineRunner {
+public class BookDataInitialize implements CommandLineRunner {
 
     @Autowired
     @Qualifier("restTemplate")
@@ -46,15 +45,14 @@ public class BookingDataInitialize implements CommandLineRunner {
         BookResponse[] body = response.getBody();
         body = restTemplate.getForObject(sourceUrl, BookResponse[].class, Collections.emptyMap());
 
-        User admin = userRepository.findByUserName("ADMIN").orElseThrow();
+        User admin = (User) userRepository.findByUserName("ADMIN").orElseThrow();
         Arrays.stream(body)
                 .map(x -> {
                     Books books = new Books();
-                    books.setId(x.getId());
-                    books.setISBN(x.getId());
-                    books.setTittle(x.getTitle());
-                    books.setAuthor(x.getTitle());
-                    books.setAccess(x.isCompleted());
+                    books.setISBN(x.getISBN());
+                    books.setTittle(x.getTittle());
+                    books.setAuthor(x.getTittle());
+                    books.setAvailability(x.isCompleted());
                     return books;
 
                 })

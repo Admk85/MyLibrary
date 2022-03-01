@@ -12,13 +12,13 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name="libraryOrders")
+@Table(name="library_orders")
 public class BookingOrder {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "booking_id", nullable = false)
-    private Long bookingId;
+    @Column(name = "id", nullable = false)
+    private Long id;
     @ManyToOne
     private Books books;
     @ManyToOne

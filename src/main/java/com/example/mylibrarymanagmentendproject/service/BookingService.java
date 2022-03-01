@@ -1,37 +1,38 @@
 package com.example.mylibrarymanagmentendproject.service;
 import com.example.mylibrarymanagmentendproject.model.dao.BookingOrder;
-import com.example.mylibrarymanagmentendproject.repository.BookRepository;
 import com.example.mylibrarymanagmentendproject.repository.BookingRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import java.util.ArrayList;
+
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
 @RequiredArgsConstructor
 public class BookingService {
 
-    private final BookingRepository OrRepo;
+    private final BookingRepository orpo;
 
-    public void saveBooking(BookingOrder bookingOrder) {
-        OrRepo.save(bookingOrder);
+
+    public BookingOrder addBooking(BookingOrder bookingOrder) {
+        bookingOrder.getBooks();
+        bookingOrder.getUser();
+        bookingOrder.setBookingStarDate(LocalDateTime.now());
+        bookingOrder.setBookingEndDate(LocalDateTime.now());
+        bookingOrder.setId(1L);
+        bookingOrder.getLibrary();
+        return orpo.save(bookingOrder);
     }
 
-    public void saveById(Long bookingId) {
-        BookingOrder bookingOrder = OrRepo.getById(bookingId);
-        OrRepo.save(bookingOrder);
+    public BookingOrder getDetails() {
+        return (BookingOrder) orpo.findAll();
     }
 
-    public BookingOrder get(Long bookingId) {
-        return OrRepo.findById(bookingId).get();
-    }
-    public List<BookingOrder> getAll() {
-        List<BookingOrder> bookingOrder = (ArrayList<BookingOrder>) OrRepo.findAll();
-        return bookingOrder;
+    public void deleteBooking(Long id) {
+        orpo.deleteById(id);
     }
 
-    public void delete(Long id) {
-        OrRepo.deleteById(id);
+    public BookingOrder save(BookingOrder order) {return  orpo.save(order);
     }
 }
 
