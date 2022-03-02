@@ -3,7 +3,7 @@ package com.example.mylibrarymanagmentendproject.model.dto;
 
 import lombok.Getter;
 import lombok.Setter;
-import validation.PeselAndBirthdate;
+import com.example.mylibrarymanagmentendproject.validation.PeselAndBirthdate;
 
 import java.time.LocalDate;
 

@@ -2,7 +2,6 @@ package com.example.mylibrarymanagmentendproject.model.dao;
 import lombok.*;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
-import java.sql.Date;
 import java.time.LocalDateTime;
 
 
@@ -20,7 +19,7 @@ public class BookingOrder {
     @Column(name = "id", nullable = false)
     private Long id;
     @ManyToOne
-    private Books books;
+    private Book book;
     @ManyToOne
     private Library library;
     @ManyToOne

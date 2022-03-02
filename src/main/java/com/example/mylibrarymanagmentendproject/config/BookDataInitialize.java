@@ -1,7 +1,7 @@
 package com.example.mylibrarymanagmentendproject.config;
 
 
-import com.example.mylibrarymanagmentendproject.model.dao.Books;
+import com.example.mylibrarymanagmentendproject.model.dao.Book;
 import com.example.mylibrarymanagmentendproject.model.dao.User;
 import com.example.mylibrarymanagmentendproject.model.dto.BookResponse;
 import com.example.mylibrarymanagmentendproject.repository.BookRepository;
@@ -48,12 +48,12 @@ public class BookDataInitialize implements CommandLineRunner {
         User admin = (User) userRepository.findByUserName("ADMIN").orElseThrow();
         Arrays.stream(body)
                 .map(x -> {
-                    Books books = new Books();
-                    books.setISBN(x.getISBN());
-                    books.setTittle(x.getTittle());
-                    books.setAuthor(x.getAuthor());
-                    books.setAvailability(x.isAvailability());
-                    return books;
+                    Book book = new Book();
+                    book.setISBN(x.getISBN());
+                    book.setTittle(x.getTittle());
+                    book.setAuthor(x.getAuthor());
+                    book.setAvailability(x.isAvailability());
+                    return book;
 
                 })
                 .forEach(x -> bookRepository.save(x));

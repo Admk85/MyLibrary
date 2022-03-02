@@ -1,13 +1,11 @@
 package com.example.mylibrarymanagmentendproject.controller;
-import com.example.mylibrarymanagmentendproject.model.dao.Books;
+import com.example.mylibrarymanagmentendproject.model.dao.Book;
 import com.example.mylibrarymanagmentendproject.service.BookService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+
 import java.util.List;
-import java.util.Map;
 
 @RestController
 @RequiredArgsConstructor
@@ -17,15 +15,14 @@ public class BooksController {
 
     private final BookService bookService;
 
-
     @RequestMapping(method = RequestMethod.GET)
-    public List<Books> getBooks(@RequestParam Map<String, String> params, HttpServletRequest request, HttpServletResponse response) {
+    public List<Book> getBooks() {
         return bookService.getAll();
     }
 
     @RequestMapping(value = "/save", method = RequestMethod.POST)
-    public void save(@RequestBody Books books) {
-        bookService.save(books);
+    public void save(@RequestBody Book book) {
+        bookService.save(book);
     }
 
     @RequestMapping(value = "/count", method = RequestMethod.GET)
@@ -33,26 +30,26 @@ public class BooksController {
         return bookService.getCount();
     }
 
-    @RequestMapping(value = "/delete", method = RequestMethod.DELETE)
-    public void delete(@RequestBody Books ISBN) {
-        bookService.deleteByISBN(ISBN);
+    @RequestMapping(value = "/delete/{isbn}", method = RequestMethod.DELETE)
+    public void delete(@PathVariable String isbn) {
+        bookService.deleteByISBN(isbn);
     }
 
     @RequestMapping(value = "/availability", method = RequestMethod.GET)
-    public List<Books> getAvailability(@RequestAttribute("availability") boolean availability) {
+    public List<Book> getAvailability(@RequestAttribute("availability") boolean availability) {
         return bookService.getAvailability(true);
     }
     @RequestMapping(value = "/author", method = RequestMethod.GET)
-    public List<Books> getBooksByAuthor(String  author) {
+    public List<Book> getBooksByAuthor(String  author) {
         return bookService.getBooksByAuthor(author);
     }
 
     @RequestMapping(value = "/genre", method = RequestMethod.GET)
-    public List<Books> getByGenre(String  genre) {
+    public List<Book> getByGenre(String  genre) {
         return bookService.getByGenre(genre);
     }
     @RequestMapping(value = "/tittle", method = RequestMethod.GET)
-    public List<Books> getByTittle(String  tittle) {
+    public List<Book> getByTittle(String  tittle) {
         return bookService.getByTittle(tittle);
 
     }
