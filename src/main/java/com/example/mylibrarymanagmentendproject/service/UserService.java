@@ -61,8 +61,6 @@ public User findUserById(Long id){
         user.setFirstname(modification.getFirstname());
         user.setSurname(modification.getSurname());
         user.setBirthday(modification.getBirthday());
-
-
         return userRepository.save(user);
     }
 }

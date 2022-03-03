@@ -45,7 +45,7 @@ public class BookDataInitialize implements CommandLineRunner {
         BookResponse[] body = response.getBody();
         body = restTemplate.getForObject(sourceUrl, BookResponse[].class, Collections.emptyMap());
 
-        User admin = (User) userRepository.findByUserName("ADMIN").orElseThrow();
+        User admin =  userRepository.findByUserName("ADMIN").orElseThrow();
         Arrays.stream(body)
                 .map(x -> {
                     Book book = new Book();
@@ -53,7 +53,7 @@ public class BookDataInitialize implements CommandLineRunner {
                     book.setTittle(x.getTittle());
                     book.setAuthor(x.getAuthor());
                     book.setAvailability(x.isAvailability());
-                    book.setId(x.getId());
+                    book.setBookId(x.getBookId());
                     return book;
 
                 })

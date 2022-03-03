@@ -13,11 +13,11 @@ import java.sql.Date;
 @Setter
 public class BookRequest {
     private String userName;
-    private Long id;
+    private Long bookId;
     private String isbn;
     private String tittle;
     private String author;
-    private Date bookingStarDate;
-    private Date bookingEndDate;
+
+
 
 }

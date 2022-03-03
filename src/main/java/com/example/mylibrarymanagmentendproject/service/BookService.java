@@ -24,8 +24,8 @@ public class BookService {
           return  bookRepository.findById(bookId).orElseThrow().getCopies();
     }
 
-    public void deleteById(Long id) {
-        bookRepository.deleteById(id);
+    public void deleteById(Long bookId) {
+        bookRepository.deleteById(bookId);
     }
     public List<Book> getAvailability(boolean availability) {
         return bookRepository.findByAvailability(availability);

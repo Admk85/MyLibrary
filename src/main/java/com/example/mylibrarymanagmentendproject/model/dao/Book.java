@@ -14,11 +14,11 @@ import javax.persistence.*;
 public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false)
-    private Long id;
-    @Column(name = "copies", nullable = false)
+    @Column(name = "bookId")
+    private Long bookId;
+    @Column(name = "copies")
     private int  copies;
-    @Column( name = "isbn", unique = true, length = 13)
+    @Column( name = "isbn", length = 13)
     private String isbn;
     @Column(name = "author")
     private String author;

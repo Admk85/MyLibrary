@@ -22,7 +22,7 @@ public class AdminMain implements CommandLineRunner  {
         public void run(String... args) throws Exception {
             User users = new User();
             users.setUserName("ADMIN");
-            users.setPassword(passwordEncoder.encode("Adminek"));
+            users.setPassword(passwordEncoder.encode("Mortal"));
             userRepository.save(users);
         }
 }

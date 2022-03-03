@@ -33,13 +33,13 @@ public class BooksController {
     }
 
     @RequestMapping(value = "/delete/{id}", method = RequestMethod.DELETE)
-    public void deleteById(@PathVariable ("id") Long id){
-        bookService.deleteById(id);
+    public void deleteById(@PathVariable ("id") Long bookId){
+        bookService.deleteById(bookId);
     }
 
     @RequestMapping(value = "/availability/{id}", method = RequestMethod.GET)
     public List<Book> getAvailability( @PathVariable("id")@RequestAttribute("availability") boolean availability) {
-        return bookService.getAvailability(true);
+        return bookService.getAvailability(availability);
     }
     @RequestMapping(value = "/author/{author}", method = RequestMethod.GET)
     public List<Book> getByAuthor(@PathVariable("author")String  author) {

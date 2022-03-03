@@ -31,6 +31,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.GET, "/books").permitAll()
                 .antMatchers(HttpMethod.GET, "/booking").permitAll()
                 .antMatchers(HttpMethod.POST, "/booking").permitAll()
+                .antMatchers(HttpMethod.POST, "/booking/*").permitAll()
+                .antMatchers(HttpMethod.PUT, "/booking").permitAll()
+                .antMatchers(HttpMethod.DELETE, "/booking/*").permitAll()
                 .antMatchers(HttpMethod.GET, "/user").permitAll()
                 .antMatchers(HttpMethod.POST, "/user").permitAll()
                 .antMatchers(HttpMethod.GET, "/books").permitAll()
@@ -38,8 +41,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.POST, "/books").permitAll()
                 .antMatchers(HttpMethod.PUT, "/books").permitAll()
                 .antMatchers(HttpMethod.DELETE, "/books").permitAll()
-                .and()
-                .formLogin();
+                .anyRequest().authenticated();
 
 
         http.httpBasic();

@@ -1,6 +1,7 @@
 package com.example.mylibrarymanagmentendproject.controller;
 import com.example.mylibrarymanagmentendproject.model.dao.BookingOrder;
 import com.example.mylibrarymanagmentendproject.model.dto.BookRequest;
+import com.example.mylibrarymanagmentendproject.model.dto.BookingRequest;
 import com.example.mylibrarymanagmentendproject.service.BookingService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -25,20 +26,20 @@ public class BookingController {
         }
     }
     @RequestMapping(value = "/save", method = RequestMethod.POST)
-    public ResponseEntity<BookingOrder> addBooking(@RequestBody BookRequest bookRequest) {
-        BookingOrder order = service.addBooking(bookRequest);
+    public ResponseEntity<BookingOrder> addBooking(@RequestBody BookingRequest bookingRequest) {
+        BookingOrder order = service.addBooking(bookingRequest);
         return new ResponseEntity<>(order, HttpStatus.CREATED);
     }
 
-    @RequestMapping(value = "/deleteBooking/{id}", method = RequestMethod.DELETE)
-    public ResponseEntity<BookingOrder> deleteBooking(@PathVariable("id") Long id) {
-        service.deleteBooking(id);
+    @RequestMapping(value = "/deleteBooking/{bookingId}", method = RequestMethod.DELETE)
+    public ResponseEntity<BookingOrder> deleteBooking(@PathVariable("bookingId") Long bookingId) {
+        service.deleteBooking(bookingId);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    @RequestMapping(value = "update/{id}", method= RequestMethod.PUT)
-    public ResponseEntity<BookingOrder> updateBooking(@RequestBody BookRequest bookRequest, @PathVariable("id") Long id)   {
-        BookingOrder updateOrder =  service.updateBooking(bookRequest, id);
+    @RequestMapping(value = "update/{bookingId}", method= RequestMethod.PUT)
+    public ResponseEntity<BookingOrder> updateBooking(@RequestBody BookingRequest bookingRequest, @PathVariable("bookingId") Long bookingId)   {
+        BookingOrder updateOrder =  service.updateBooking(bookingRequest, bookingId);
         return new ResponseEntity<>(updateOrder, HttpStatus.OK);
 
     }
