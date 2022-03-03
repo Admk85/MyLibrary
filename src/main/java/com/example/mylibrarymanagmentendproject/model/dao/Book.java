@@ -11,15 +11,15 @@ import javax.persistence.*;
 @AllArgsConstructor
 @Entity
 @Table(name="books")
-public class Books {
+public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Long id;
     @Column(name = "copies", nullable = false)
     private int  copies;
-    @Column(unique = true, length = 13)
-    private String ISBN;
+    @Column( name = "isbn", unique = true, length = 13)
+    private String isbn;
     @Column(name = "author")
     private String author;
     @Column(name = "tittle")

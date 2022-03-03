@@ -31,12 +31,13 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.GET, "/books").permitAll()
                 .antMatchers(HttpMethod.GET, "/booking").permitAll()
                 .antMatchers(HttpMethod.POST, "/booking").permitAll()
+                .antMatchers(HttpMethod.GET, "/user").permitAll()
                 .antMatchers(HttpMethod.POST, "/user").permitAll()
-                .antMatchers(HttpMethod.GET, "/books").hasAnyRole("USER", "ADMIN" )
-                .antMatchers(HttpMethod.GET, "/books/*").hasAnyRole("USER", "ADMIN")
-                .antMatchers(HttpMethod.POST, "/books").hasAnyRole("ADMIN", "USER")
-                .antMatchers(HttpMethod.PUT, "/books").hasAnyRole("ADMIN", "USER")
-                .antMatchers(HttpMethod.DELETE, "/books").hasAnyRole("ADMIN", "USER")
+                .antMatchers(HttpMethod.GET, "/books").permitAll()
+                .antMatchers(HttpMethod.GET, "/books/*").permitAll()
+                .antMatchers(HttpMethod.POST, "/books").permitAll()
+                .antMatchers(HttpMethod.PUT, "/books").permitAll()
+                .antMatchers(HttpMethod.DELETE, "/books").permitAll()
                 .and()
                 .formLogin();
 
@@ -44,6 +45,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         http.httpBasic();
         http.cors();
         http.csrf().disable();
+        http.headers().frameOptions().sameOrigin();
     }
 
 }

@@ -1,11 +1,9 @@
 package com.example.mylibrarymanagmentendproject.service;
 import com.example.mylibrarymanagmentendproject.model.dao.BookingOrder;
-import com.example.mylibrarymanagmentendproject.model.dao.User;
 import com.example.mylibrarymanagmentendproject.model.dto.BookRequest;
 import com.example.mylibrarymanagmentendproject.repository.BookingRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import java.time.LocalDateTime;
 
 @Service
 @RequiredArgsConstructor
@@ -14,18 +12,8 @@ public class BookingService {
     private final BookingRepository orpo;
 
 
-    public BookingOrder addBooking(BookRequest bookRequest) {
-        BookingOrder bookingOrder=new BookingOrder();
-        User user = new User();
-        bookRequest.setISBN("");
-        bookRequest.setAuthor("");
-        bookRequest.setTittle("");
-        user.setUserName("");
-        bookRequest.setBookingStarDate(LocalDateTime.now());
-        bookRequest.setBookingEndDate(LocalDateTime.now());
-        bookRequest.setReturnsDate(LocalDateTime.now());
-        return orpo.save(bookingOrder);
-    }
+
+    
 
     public BookingOrder getDetails() {
         return (BookingOrder) orpo.findAll();
@@ -35,9 +23,36 @@ public class BookingService {
         orpo.deleteById(id);
     }
 
-    public BookingOrder save(BookingOrder order) {return  orpo.save(order);
+    public BookingOrder addBooking(BookRequest bookRequest) {
+        BookingOrder bookingOrder=new BookingOrder();
+        bookingOrder.setAuthor(bookRequest.getUserName());
+        bookingOrder.setTittle(bookRequest.getAuthor());
+        bookingOrder.setIsbn(bookRequest.getIsbn());
+        bookingOrder.setUserName(bookRequest.getUserName());
+        bookingOrder.setBookingStarDate(bookRequest.getBookingStarDate());
+        bookingOrder.setBookingEndDate(bookRequest.getBookingEndDate());
+        return orpo.save(bookingOrder);
+
+    }
+
+    public BookingOrder updateBooking(BookRequest bookRequest, Long id) {
+        BookingOrder bookingOrder=new BookingOrder();
+        bookingOrder.setAuthor(bookRequest.getUserName());
+        bookingOrder.setTittle(bookRequest.getAuthor());
+        bookingOrder.setIsbn(bookRequest.getIsbn());
+        bookingOrder.setUserName(bookRequest.getUserName());
+        bookingOrder.setId(bookRequest.getId());
+        bookingOrder.setBookingEndDate(bookRequest.getBookingEndDate());
+        return orpo.save(bookingOrder);
     }
 }
+
+
+   
+    
+
+
+
 
 
 

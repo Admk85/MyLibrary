@@ -1,9 +1,9 @@
 package com.example.mylibrarymanagmentendproject.service;
-import com.example.mylibrarymanagmentendproject.model.dao.Books;
+import com.example.mylibrarymanagmentendproject.model.dao.Book;
 import com.example.mylibrarymanagmentendproject.repository.BookRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import java.util.ArrayList;
+
 import java.util.List;
 import java.util.Optional;
 
@@ -12,58 +12,45 @@ import java.util.Optional;
 public class BookService {
 
     private final BookRepository bookRepository;
-    public Books save(Books books) {
-        bookRepository.save(books);
-        return books;
+    public Book save(Book book) {
+        bookRepository.save(book);
+        return book;
     }
     public Long getCount() {
         return bookRepository.count();
     }
-    public int  getBookCopyCounts(Long bookId ) {
+    public int  getBookCopyCounts(Long bookId )
+    {
           return  bookRepository.findById(bookId).orElseThrow().getCopies();
     }
-    public List<Books> getAll() {
-        return bookRepository.findAll();
+
+    public void deleteById(Long id) {
+        bookRepository.deleteById(id);
     }
-    public void deleteByISBN(Books ISBN) {
-        bookRepository.delete(ISBN);
-    }
-    public List<Books> getAvailability(boolean availability) {
+    public List<Book> getAvailability(boolean availability) {
         return bookRepository.findByAvailability(availability);
     }
-    public List<Books> getBooksByAuthor(String author) {
-        List<Books> book = new ArrayList<>();
-        for (Books books : bookRepository.findAll()) {
-            if (books.getAuthor().toLowerCase().contains(author.toLowerCase())) {
-                book.add(books);
-            }
-        }
-        return book;
+    public List<Book> getByAuthor(String author) {
+        return bookRepository.findByAuthor(author);
     }
-    public List<Books> getByGenre(String genre) {
-        List<Books> book = new ArrayList<>();
-        for (Books books : bookRepository.findAll()) {
-            if (books.getGenre().toLowerCase().contains(genre.toLowerCase())) {
-                book.add(books);
-            }
-        }
-        return book;
+    public List<Book> getByGenre(String genre) {
+        return bookRepository.findByGenre(genre);
+    }
+    public List<Book> getByTittle(String tittle) {
+        return bookRepository.findByTittle(tittle);
+
     }
 
-    public List<Books> getByTittle(String tittle) {
-        List<Books> book = new ArrayList<>();
-        for (Books books : bookRepository.findAll()) {
-            if (books.getTittle().toLowerCase().contains(tittle.toLowerCase())) {
-                book.add(books);
-            }
-        }
-        return book;
-    }
-
-    public Optional<Books> findById(Long bookId) {
+    public Optional<Book> findById(Long bookId) {
         return bookRepository.findById(bookId);
     }
+
+
+    public List<Book> findAll() {
+        return bookRepository.findAll();
+    }
 }
+
 
 
 

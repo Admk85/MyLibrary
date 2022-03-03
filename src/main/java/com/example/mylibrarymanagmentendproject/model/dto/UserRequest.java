@@ -3,7 +3,7 @@ package com.example.mylibrarymanagmentendproject.model.dto;
 
 import lombok.Getter;
 import lombok.Setter;
-import validation.PeselAndBirthdate;
+import com.example.mylibrarymanagmentendproject.validation.PeselAndBirthdate;
 
 import java.time.LocalDate;
 
@@ -13,5 +13,10 @@ import java.time.LocalDate;
 public class UserRequest {
     private String pesel;
     private LocalDate birthday;
+    private String userName;
+    private String firstname;
+    private String surname;
+    private String email;
+    private String password;
 }
 

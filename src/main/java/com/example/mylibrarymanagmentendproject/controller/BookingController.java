@@ -14,8 +14,6 @@ import java.util.List;
 @RequestMapping("/booking")
 @Slf4j
 public class BookingController {
-
-
     private final BookingService service;
 
 
@@ -26,22 +24,23 @@ public class BookingController {
             return new ResponseEntity<>(ord, HttpStatus.OK);
         }
     }
-
-    @RequestMapping(value = "/save-booking", method = RequestMethod.POST)
+    @RequestMapping(value = "/save", method = RequestMethod.POST)
     public ResponseEntity<BookingOrder> addBooking(@RequestBody BookRequest bookRequest) {
-        BookingOrder bookingOrder1 = service.addBooking(bookRequest);
-        return new ResponseEntity<>(bookingOrder1, HttpStatus.CREATED);
+        BookingOrder order = service.addBooking(bookRequest);
+        return new ResponseEntity<>(order, HttpStatus.CREATED);
     }
 
-    @RequestMapping(value = "/deleteBooking", method = RequestMethod.DELETE)
+    @RequestMapping(value = "/deleteBooking/{id}", method = RequestMethod.DELETE)
     public ResponseEntity<BookingOrder> deleteBooking(@PathVariable("id") Long id) {
         service.deleteBooking(id);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    @RequestMapping(value = "updateBooking", method = RequestMethod.PUT)
-    public ResponseEntity<BookingOrder> updateBooking(BookingOrder order) {
-        BookingOrder updateBooking = (BookingOrder) service.save(order);
-        return new ResponseEntity<>(updateBooking, HttpStatus.OK);
+    @RequestMapping(value = "update/{id}", method= RequestMethod.PUT)
+    public ResponseEntity<BookingOrder> updateBooking(@RequestBody BookRequest bookRequest, @PathVariable("id") Long id)   {
+        BookingOrder updateOrder =  service.updateBooking(bookRequest, id);
+        return new ResponseEntity<>(updateOrder, HttpStatus.OK);
+
     }
-}
+    }
+

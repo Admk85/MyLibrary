@@ -4,12 +4,18 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.sql.Date;
+
 @Getter
 @Setter
 @Builder
 public class BookResponse {
-    private String ISBN;
-    private String Tittle;
-    private String Author;
-    private boolean availability;
+    private String userName;
+    private Long id;
+    private String isbn;
+    private String tittle;
+    private String author;
+    public boolean isAvailability;
+    private Date bookingStarDate;
+    private Date bookingEndDate;
 }

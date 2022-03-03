@@ -1,13 +1,12 @@
 package com.example.mylibrarymanagmentendproject.config;
 
-import com.example.mylibrarymanagmentendproject.model.dao.Books;
+import com.example.mylibrarymanagmentendproject.model.dao.Book;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.client.RestTemplate;
 
@@ -19,11 +18,11 @@ import java.util.Map;
 public class AppConfig {
 
     @Bean
-    public Map<Long, Books> initialData() {
-        HashMap<Long, Books> map = new HashMap();
-        Books b1 = new Books(1L, 2, "594837583", "Steven Erikson", "Władca Ciemności"
+    public Map<Long, Book> initialData() {
+        HashMap<Long, Book> map = new HashMap();
+        Book b1 = new Book(1L, 2, "594837583", "Steven Erikson", "Władca Ciemności"
                 , "fantasy", true );
-        Books b2 = new Books(2L, 1, "243564465", "Alfred Hitchcock", "Ptaki",
+        Book b2 = new Book(2L, 1, "243564465", "Alfred Hitchcock", "Ptaki",
                 "horror", false);
         map.put(1L, b1);
         map.put(2L, b2);
@@ -32,7 +31,7 @@ public class AppConfig {
 
     @Bean
     public PasswordEncoder passwordEncoder() {
-        return NoOpPasswordEncoder.getInstance();
+        return new BCryptPasswordEncoder();
     }
 
     @Bean

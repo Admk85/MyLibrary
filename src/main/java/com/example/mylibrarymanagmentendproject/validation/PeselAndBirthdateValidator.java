@@ -1,4 +1,4 @@
-package validation;
+package com.example.mylibrarymanagmentendproject.validation;
 
 import com.example.mylibrarymanagmentendproject.model.dto.UserRequest;
 
@@ -16,6 +16,6 @@ public class PeselAndBirthdateValidator implements
                            ConstraintValidatorContext constraintValidatorContext) {
         userRequest.getPesel();
         userRequest.getBirthday();
-        return false;
+        return true;
     }
 }

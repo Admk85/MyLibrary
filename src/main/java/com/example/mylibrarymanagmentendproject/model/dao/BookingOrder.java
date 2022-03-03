@@ -19,20 +19,18 @@ public class BookingOrder {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Long id;
-    @ManyToOne
-    private Books books;
-    @ManyToOne
-    private Library library;
-    @ManyToOne
-    private User user;
+    @Column(name="username",unique = true)
+    private String userName;
+    @Column( name = "isbn", unique = true, length = 13)
+    private String isbn;
+    @Column(name = "author")
+    private String author;
+    @Column(name = "tittle")
+    private String tittle;
     @Column(name = "booking_start_date")
-    @NotNull
-    private LocalDateTime bookingStarDate;
+    private Date bookingStarDate;
     @Column(name = "bookingEndDate")
-    @NotNull
-    private LocalDateTime bookingEndDate;
-    @NotNull
-    @Column(name = "returnDate")
-    private LocalDateTime returnsDate;
+    private Date bookingEndDate;
+
 
 }

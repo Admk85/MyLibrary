@@ -1,0 +1,167 @@
+{
+	"info": {
+		"_postman_id": "d708555d-bcf8-4879-bee1-de6c27389186",
+		"name": "MyLibrary",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "add-user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pesel\":\"5255254835\",\r\n    \"birthday\":\"2000-01-05\",\r\n    \"userName\": \"Andrew5852\",\r\n    \"firstname\": \"Andrzej\",\r\n    \"surname\": \"Licha\",\r\n    \"email\": \"Kosek@gmail.com\",\r\n    \"password\":\"oi6mdjdjd\"\r\n   \r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/addUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"addUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteUser",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/user/deleteUser/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"deleteUser",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findUser",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/findUser/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"findUser",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateUser",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"userId\": 2,\r\n    \"userName\": \"Andrew34\",\r\n    \"password\": \"$2a$10$O.GobGCFEvQnxE6Dd8JvF.ly7Rkp0ZtDV9ttbevKEpfwBgVER2Zxi\",\r\n    \"firstname\": \"Andrzej\",\r\n    \"surname\": \"Licha\",\r\n    \"town\": null,\r\n    \"postcode\": null,\r\n    \"address\": null,\r\n    \"telephone\": null,\r\n    \"email\": \"Kosek@gmail.com\",\r\n    \"birthday\": \"2000-01-05\",\r\n    \"registerDate\": \"2022-03-02T13:55:51.8697282\",\r\n    \"modifyDate\": \"2022-03-02T13:55:51.8697282\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/update/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"update",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add-Book",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"copies\": 2,\r\n\"isbn\":\"978-83-924051\",\r\n\"author\":\"Jan Podolski\",\r\n\"tittle\":\"kuechenne rewolucje\",\r\n\"genre\":\"kuchenna\",\r\n\"availability\":true\r\n\r\n\r\n\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/books/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "countBook",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "getAll",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

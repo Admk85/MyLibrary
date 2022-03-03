@@ -18,13 +18,13 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "userId", nullable = false)
     private Long userId;
-    @Column(name="user_card_Id")
-    private Long userCardId;
+    @Column(unique = true, name="user_card_Id")
+    private String userCardId;
     @Column(name="username")
     private String userName;
     @Column(name = "password")
     private String password;
-    @Column(unique = true, length = 25)
+    @Column( length = 25)
     private String firstname;
     @Column(unique = true, length = 25)
     private String surname;
@@ -36,7 +36,7 @@ public class User {
     private String address;
     @Column(name="telephone")
     private Long telephone;
-    @Column(name="email")
+    @Column(unique = true, name="email")
     private String email;
     @Column(name="birthday")
     private Date birthday;
