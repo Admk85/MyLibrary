@@ -10,7 +10,7 @@ import java.util.Optional;
 @Repository
 public interface BookingRepository extends JpaRepository<BookingOrder, Long> {
     List<BookingOrder> findAll();
-
+    int countByBookBookId(Long bookId);
 
 }
 
