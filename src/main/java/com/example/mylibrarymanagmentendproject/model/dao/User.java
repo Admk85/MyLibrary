@@ -10,7 +10,6 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Data
 @Table(name="libraryUser")
 public class User {
 
@@ -20,7 +19,6 @@ public class User {
     private Long userId;
     @Column( name="user_card_Id")
     private String userCardId;
-
     @Column(name="username")
     private String userName;
     @Column(name = "password")

@@ -125,7 +125,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"copies\": 2,\r\n\"isbn\":\"978-83-924051\",\r\n\"author\":\"Jan Podolski\",\r\n\"tittle\":\"kuechenne rewolucje\",\r\n\"genre\":\"kuchenna\",\r\n\"availability\":true\r\n\r\n\r\n\r\n\r\n}",
+					"raw": "{\"id\":1,\r\n\"copies\": 1,\r\n\"isbn\":\"978-83-964051\",\r\n\"author\":\"Jan gostek\",\r\n\"tittle\":\"wojenne rewolucje2\",\r\n\"genre\":\"sensacyjny\",\r\n\"availability\":true\r\n\r\n\r\n\r\n\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -149,14 +149,248 @@
 		},
 		{
 			"name": "countBook",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/books/count",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books",
+						"count"
+					]
+				}
 			},
 			"response": []
 		},
 		{
-			"name": "getAll",
+			"name": "findAllBooks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "copieCounts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/books/copy_counts/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books",
+						"copy_counts",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteBook",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/books/delete/200",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books",
+						"delete",
+						"200"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "availibitybook",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/books/availability/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books",
+						"availability",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "genre",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/books/genre/sensacyjny",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books",
+						"genre",
+						"sensacyjny"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tittle",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/books/tittle/wojenne rewolucje2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books",
+						"tittle",
+						"wojenne rewolucje2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "author",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/books/author/Jan gostek",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books",
+						"author",
+						"Jan gostek"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getEmailUser",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/user/findEmail/Kosek@gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"findEmail",
+						"Kosek@gmail.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SaveBooking",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bookingStarDate\" : \"2020-01-01\",\r\n    \"bookingEndDate\" : \"2020-01-02\"\r\n}\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/booking/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"booking",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete-Booking",
 			"request": {
 				"method": "GET",
 				"header": []

@@ -8,6 +8,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -18,7 +20,7 @@ public class BookingController {
     private final BookingService service;
 
 
-    @RequestMapping(value = "/booking-details", method = RequestMethod.GET)
+    @RequestMapping( method = RequestMethod.GET)
     public ResponseEntity<BookingOrder> getBookingDetails() {
         BookingOrder ord =  service.getDetails();
         {
@@ -26,7 +28,7 @@ public class BookingController {
         }
     }
     @RequestMapping(value = "/save", method = RequestMethod.POST)
-    public ResponseEntity<BookingOrder> addBooking(@RequestBody BookingRequest bookingRequest) {
+    public ResponseEntity<BookingOrder> addBooking(@Valid @RequestBody BookingRequest bookingRequest) {
         BookingOrder order = service.addBooking(bookingRequest);
         return new ResponseEntity<>(order, HttpStatus.CREATED);
     }

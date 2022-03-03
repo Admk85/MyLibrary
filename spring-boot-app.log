@@ -5424,3 +5424,273 @@ java.io.FileNotFoundException: class path resource [static/index.html] cannot be
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.56.jar:9.0.56]
 	at java.base/java.lang.Thread.run(Thread.java:831) ~[na:na]
 
+2022-03-03 19:41:30.743  INFO 10592 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-03-03 19:41:30.743  INFO 10592 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2022-03-03 19:41:30.743  INFO 10592 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-03-03 19:41:30.743  INFO 10592 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-03-03 19:43:21.500  INFO 7444 --- [main] .MyLibraryManagmentEndProjectApplication : Starting MyLibraryManagmentEndProjectApplication using Java 16.0.1 on LAPTOP-B5FHCK4F with PID 7444 (C:\Users\adamk\Desktop\MyLibraryManagmentEndProject\target\classes started by adamk in C:\Users\adamk\Desktop\MyLibraryManagmentEndProject)
+2022-03-03 19:43:21.515  INFO 7444 --- [main] .MyLibraryManagmentEndProjectApplication : The following profiles are active: h2
+2022-03-03 19:43:22.931  INFO 12520 --- [main] .MyLibraryManagmentEndProjectApplication : Starting MyLibraryManagmentEndProjectApplication using Java 16.0.1 on LAPTOP-B5FHCK4F with PID 12520 (C:\Users\adamk\Desktop\MyLibraryManagmentEndProject\target\classes started by adamk in C:\Users\adamk\Desktop\MyLibraryManagmentEndProject)
+2022-03-03 19:43:22.931  INFO 12520 --- [main] .MyLibraryManagmentEndProjectApplication : The following profiles are active: h2
+2022-03-03 19:43:23.635  INFO 7444 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-03 19:43:23.728  INFO 7444 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 83 ms. Found 3 JPA repository interfaces.
+2022-03-03 19:43:24.057  INFO 12520 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-03 19:43:24.135  INFO 12520 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 66 ms. Found 3 JPA repository interfaces.
+2022-03-03 19:43:24.719  INFO 7444 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-03-03 19:43:24.734  INFO 7444 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-03 19:43:24.734  INFO 7444 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-03-03 19:43:24.734  INFO 12520 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-03-03 19:43:24.750  INFO 12520 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-03 19:43:24.750  INFO 12520 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-03-03 19:43:24.891  INFO 12520 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-03 19:43:24.891  INFO 12520 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1904 ms
+2022-03-03 19:43:24.922  INFO 7444 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-03 19:43:24.922  INFO 7444 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3277 ms
+2022-03-03 19:43:25.016  INFO 12520 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-03 19:43:25.109  INFO 7444 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-03 19:43:25.141  INFO 12520 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-03 19:43:25.141  INFO 12520 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2022-03-03 19:43:25.304  INFO 12520 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-03 19:43:25.342  INFO 12520 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-03-03 19:43:25.420  INFO 7444 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-03 19:43:25.451  INFO 7444 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2022-03-03 19:43:25.483  INFO 12520 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-03 19:43:25.608  INFO 12520 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-03-03 19:43:25.718  INFO 7444 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-03 19:43:25.796  INFO 7444 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-03-03 19:43:26.015  INFO 7444 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-03 19:43:26.218  INFO 7444 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-03-03 19:43:26.247  INFO 12520 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-03 19:43:26.263  INFO 12520 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-03 19:43:26.779  WARN 12520 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-03 19:43:27.169  INFO 12520 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-03-03 19:43:27.169  INFO 12520 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@350be5ec, org.springframework.security.web.context.SecurityContextPersistenceFilter@5dc120ab, org.springframework.security.web.header.HeaderWriterFilter@3879feec, org.springframework.web.filter.CorsFilter@478cebdb, org.springframework.security.web.authentication.logout.LogoutFilter@7169d668, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@234bfc8c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7ef7f414, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@73baf7f0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5464aeec, org.springframework.security.web.session.SessionManagementFilter@238280df, org.springframework.security.web.access.ExceptionTranslationFilter@497fd334, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1ddc8fc]
+2022-03-03 19:43:27.286  WARN 12520 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-03-03 19:43:27.411  INFO 7444 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-03 19:43:27.427  INFO 7444 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-03 19:43:27.505  INFO 12520 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-03-03 19:43:27.521  INFO 12520 --- [main] .MyLibraryManagmentEndProjectApplication : Started MyLibraryManagmentEndProjectApplication in 5.182 seconds (JVM running for 6.28)
+2022-03-03 19:43:28.162  WARN 7444 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-03 19:43:28.856  INFO 7444 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-03-03 19:43:28.888  INFO 7444 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5f7bd970, org.springframework.security.web.context.SecurityContextPersistenceFilter@70f3bf00, org.springframework.security.web.header.HeaderWriterFilter@7c0a6f62, org.springframework.web.filter.CorsFilter@6406b84d, org.springframework.security.web.authentication.logout.LogoutFilter@6b170692, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4fd00e10, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@15bcecf9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@77622c82, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5274acd1, org.springframework.security.web.session.SessionManagementFilter@53f1fcc2, org.springframework.security.web.access.ExceptionTranslationFilter@2c51c756, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2d2afc39]
+2022-03-03 19:43:29.044  WARN 7444 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-03-03 19:43:29.269  WARN 7444 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+2022-03-03 19:43:29.269  INFO 7444 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-03-03 19:43:29.269  INFO 7444 --- [main] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2022-03-03 19:43:29.285  INFO 7444 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-03-03 19:43:29.285  INFO 7444 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-03-03 19:43:29.285  INFO 7444 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-03-03 19:43:29.316  INFO 7444 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-03-03 19:43:29.347 ERROR 7444 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2022-03-03 19:43:29.988  INFO 12520 --- [RMI TCP Connection(3)-192.168.0.5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-03 19:43:29.988  INFO 12520 --- [RMI TCP Connection(3)-192.168.0.5] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-03 19:43:29.988  INFO 12520 --- [RMI TCP Connection(3)-192.168.0.5] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2022-03-03 19:44:44.900  WARN 12520 --- [http-nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot construct instance of `com.example.mylibrarymanagmentendproject.model.dao.Book` (although at least one Creator exists): no int/Int-argument constructor/factory method to deserialize from Number value (1); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `com.example.mylibrarymanagmentendproject.model.dao.Book` (although at least one Creator exists): no int/Int-argument constructor/factory method to deserialize from Number value (1)<EOL> at [Source: (PushbackInputStream); line: 2, column: 11] (through reference chain: com.example.mylibrarymanagmentendproject.model.dto.BookingRequest["bookId"])]
+2022-03-03 19:45:57.959  WARN 12520 --- [http-nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+2022-03-03 19:46:09.745  WARN 12520 --- [http-nio-8080-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot construct instance of `com.example.mylibrarymanagmentendproject.model.dao.Book` (although at least one Creator exists): no int/Int-argument constructor/factory method to deserialize from Number value (1); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `com.example.mylibrarymanagmentendproject.model.dao.Book` (although at least one Creator exists): no int/Int-argument constructor/factory method to deserialize from Number value (1)<EOL> at [Source: (PushbackInputStream); line: 2, column: 11] (through reference chain: com.example.mylibrarymanagmentendproject.model.dto.BookingRequest["bookId"])]
+2022-03-03 19:48:58.895  INFO 12520 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-03-03 19:48:58.910  INFO 12520 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2022-03-03 19:48:58.910  INFO 12520 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-03-03 19:48:58.910  INFO 12520 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-03-03 19:49:05.122  INFO 7756 --- [main] .MyLibraryManagmentEndProjectApplication : Starting MyLibraryManagmentEndProjectApplication using Java 16.0.1 on LAPTOP-B5FHCK4F with PID 7756 (C:\Users\adamk\Desktop\MyLibraryManagmentEndProject\target\classes started by adamk in C:\Users\adamk\Desktop\MyLibraryManagmentEndProject)
+2022-03-03 19:49:05.138  INFO 7756 --- [main] .MyLibraryManagmentEndProjectApplication : The following profiles are active: h2
+2022-03-03 19:49:06.146  INFO 7756 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-03 19:49:06.225  INFO 7756 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 59 ms. Found 3 JPA repository interfaces.
+2022-03-03 19:49:06.710  INFO 7756 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-03-03 19:49:06.733  INFO 7756 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-03 19:49:06.733  INFO 7756 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-03-03 19:49:06.833  INFO 7756 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-03 19:49:06.833  INFO 7756 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1643 ms
+2022-03-03 19:49:06.933  INFO 7756 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-03 19:49:07.027  INFO 7756 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-03 19:49:07.033  INFO 7756 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2022-03-03 19:49:07.165  INFO 7756 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-03 19:49:07.196  INFO 7756 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-03-03 19:49:07.328  INFO 7756 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-03 19:49:07.412  INFO 7756 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-03-03 19:49:07.936  INFO 7756 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-03 19:49:07.951  INFO 7756 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-03 19:49:08.368  WARN 7756 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-03 19:49:08.669  INFO 7756 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-03-03 19:49:08.685  INFO 7756 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1fab0394, org.springframework.security.web.context.SecurityContextPersistenceFilter@53564a4c, org.springframework.security.web.header.HeaderWriterFilter@176e839e, org.springframework.web.filter.CorsFilter@28e24663, org.springframework.security.web.authentication.logout.LogoutFilter@68de8522, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@6033f36c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@69a294d8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7120daa6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2ee5c08d, org.springframework.security.web.session.SessionManagementFilter@17e6d07b, org.springframework.security.web.access.ExceptionTranslationFilter@363ba634, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@34d72f06]
+2022-03-03 19:49:08.769  WARN 7756 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-03-03 19:49:08.970  INFO 7756 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-03-03 19:49:08.985  INFO 7756 --- [main] .MyLibraryManagmentEndProjectApplication : Started MyLibraryManagmentEndProjectApplication in 4.289 seconds (JVM running for 5.21)
+2022-03-03 19:49:10.985  INFO 7756 --- [RMI TCP Connection(2)-192.168.0.5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-03 19:49:10.985  INFO 7756 --- [RMI TCP Connection(2)-192.168.0.5] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-03 19:49:10.985  INFO 7756 --- [RMI TCP Connection(2)-192.168.0.5] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2022-03-03 19:50:29.436  INFO 7756 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-03-03 19:50:29.436  INFO 7756 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2022-03-03 19:50:29.436  INFO 7756 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-03-03 19:50:29.436  INFO 7756 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-03-03 19:50:35.234  INFO 14676 --- [main] .MyLibraryManagmentEndProjectApplication : Starting MyLibraryManagmentEndProjectApplication using Java 16.0.1 on LAPTOP-B5FHCK4F with PID 14676 (C:\Users\adamk\Desktop\MyLibraryManagmentEndProject\target\classes started by adamk in C:\Users\adamk\Desktop\MyLibraryManagmentEndProject)
+2022-03-03 19:50:35.234  INFO 14676 --- [main] .MyLibraryManagmentEndProjectApplication : The following profiles are active: h2
+2022-03-03 19:50:36.267  INFO 14676 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-03 19:50:36.336  INFO 14676 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 3 JPA repository interfaces.
+2022-03-03 19:50:36.838  INFO 14676 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-03-03 19:50:36.853  INFO 14676 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-03 19:50:36.853  INFO 14676 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-03-03 19:50:36.954  INFO 14676 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-03 19:50:36.954  INFO 14676 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1674 ms
+2022-03-03 19:50:37.049  INFO 14676 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-03 19:50:37.154  INFO 14676 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-03 19:50:37.154  INFO 14676 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2022-03-03 19:50:37.286  INFO 14676 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-03 19:50:37.339  INFO 14676 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-03-03 19:50:37.453  INFO 14676 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-03 19:50:37.554  INFO 14676 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-03-03 19:50:37.685 ERROR 14676 --- [main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: @Column(s) not allowed on a @ManyToOne property: com.example.mylibrarymanagmentendproject.model.dao.BookingOrder.UserName
+2022-03-03 19:50:37.685  WARN 14676 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: @Column(s) not allowed on a @ManyToOne property: com.example.mylibrarymanagmentendproject.model.dao.BookingOrder.UserName
+2022-03-03 19:50:37.685  INFO 14676 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-03-03 19:50:37.685  INFO 14676 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-03-03 19:50:37.685  INFO 14676 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-03-03 19:50:37.701  INFO 14676 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-03-03 19:50:37.717 ERROR 14676 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: @Column(s) not allowed on a @ManyToOne property: com.example.mylibrarymanagmentendproject.model.dao.BookingOrder.UserName
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.15.jar:5.3.15]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.15.jar:5.3.15]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.15.jar:5.3.15]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.3.jar:2.6.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-2.6.3.jar:2.6.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:414) ~[spring-boot-2.6.3.jar:2.6.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302) ~[spring-boot-2.6.3.jar:2.6.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.6.3.jar:2.6.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.6.3.jar:2.6.3]
+	at com.example.mylibrarymanagmentendproject.MyLibraryManagmentEndProjectApplication.main(MyLibraryManagmentEndProjectApplication.java:10) ~[classes/:na]
+Caused by: org.hibernate.AnnotationException: @Column(s) not allowed on a @ManyToOne property: com.example.mylibrarymanagmentendproject.model.dao.BookingOrder.UserName
+	at org.hibernate.cfg.AnnotationBinder.processElementAnnotations(AnnotationBinder.java:1793) ~[hibernate-core-5.6.4.Final.jar:5.6.4.Final]
+	at org.hibernate.cfg.AnnotationBinder.processIdPropertiesIfNotAlready(AnnotationBinder.java:967) ~[hibernate-core-5.6.4.Final.jar:5.6.4.Final]
+	at org.hibernate.cfg.AnnotationBinder.bindClass(AnnotationBinder.java:792) ~[hibernate-core-5.6.4.Final.jar:5.6.4.Final]
+	at org.hibernate.boot.model.source.internal.annotations.AnnotationMetadataSourceProcessorImpl.processEntityHierarchies(AnnotationMetadataSourceProcessorImpl.java:225) ~[hibernate-core-5.6.4.Final.jar:5.6.4.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess$1.processEntityHierarchies(MetadataBuildingProcess.java:239) ~[hibernate-core-5.6.4.Final.jar:5.6.4.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:282) ~[hibernate-core-5.6.4.Final.jar:5.6.4.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1460) ~[hibernate-core-5.6.4.Final.jar:5.6.4.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1494) ~[hibernate-core-5.6.4.Final.jar:5.6.4.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.15.jar:5.3.15]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.15.jar:5.3.15]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.15.jar:5.3.15]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.15.jar:5.3.15]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.15.jar:5.3.15]
+	... 16 common frames omitted
+
+2022-03-03 19:51:13.986  INFO 8212 --- [main] .MyLibraryManagmentEndProjectApplication : Starting MyLibraryManagmentEndProjectApplication using Java 16.0.1 on LAPTOP-B5FHCK4F with PID 8212 (C:\Users\adamk\Desktop\MyLibraryManagmentEndProject\target\classes started by adamk in C:\Users\adamk\Desktop\MyLibraryManagmentEndProject)
+2022-03-03 19:51:13.986  INFO 8212 --- [main] .MyLibraryManagmentEndProjectApplication : The following profiles are active: h2
+2022-03-03 19:51:14.986  INFO 8212 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-03 19:51:15.053  INFO 8212 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 3 JPA repository interfaces.
+2022-03-03 19:51:15.532  INFO 8212 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-03-03 19:51:15.532  INFO 8212 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-03 19:51:15.532  INFO 8212 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-03-03 19:51:15.639  INFO 8212 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-03 19:51:15.639  INFO 8212 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1602 ms
+2022-03-03 19:51:15.739  INFO 8212 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-03 19:51:15.839  INFO 8212 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-03 19:51:15.839  INFO 8212 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2022-03-03 19:51:15.978  INFO 8212 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-03 19:51:16.008  INFO 8212 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-03-03 19:51:16.124  INFO 8212 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-03 19:51:16.209  INFO 8212 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-03-03 19:51:16.749  INFO 8212 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-03 19:51:16.749  INFO 8212 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-03 19:51:17.187  WARN 8212 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-03 19:51:17.520  INFO 8212 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-03-03 19:51:17.545  INFO 8212 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@57ac2910, org.springframework.security.web.context.SecurityContextPersistenceFilter@1f7557fe, org.springframework.security.web.header.HeaderWriterFilter@8f374de, org.springframework.web.filter.CorsFilter@3a663a45, org.springframework.security.web.authentication.logout.LogoutFilter@5dd227b7, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2ea4e762, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@52963839, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1734b1a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@e296794, org.springframework.security.web.session.SessionManagementFilter@7c6ab057, org.springframework.security.web.access.ExceptionTranslationFilter@5516ee5, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@544e6b]
+2022-03-03 19:51:17.651  WARN 8212 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-03-03 19:51:17.836  INFO 8212 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-03-03 19:51:17.851  INFO 8212 --- [main] .MyLibraryManagmentEndProjectApplication : Started MyLibraryManagmentEndProjectApplication in 4.339 seconds (JVM running for 5.134)
+2022-03-03 19:51:19.710  INFO 8212 --- [RMI TCP Connection(2)-192.168.0.5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-03 19:51:19.710  INFO 8212 --- [RMI TCP Connection(2)-192.168.0.5] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-03 19:51:19.710  INFO 8212 --- [RMI TCP Connection(2)-192.168.0.5] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2022-03-03 19:51:38.410  WARN 8212 --- [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot construct instance of `com.example.mylibrarymanagmentendproject.model.dao.Book` (although at least one Creator exists): no int/Int-argument constructor/factory method to deserialize from Number value (1); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `com.example.mylibrarymanagmentendproject.model.dao.Book` (although at least one Creator exists): no int/Int-argument constructor/factory method to deserialize from Number value (1)<EOL> at [Source: (PushbackInputStream); line: 2, column: 11] (through reference chain: com.example.mylibrarymanagmentendproject.model.dto.BookingRequest["bookId"])]
+2022-03-03 19:53:27.179  INFO 8212 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-03-03 19:53:27.179  INFO 8212 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2022-03-03 19:53:27.185  INFO 8212 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-03-03 19:53:27.185  INFO 8212 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-03-03 19:53:33.400  INFO 9172 --- [main] .MyLibraryManagmentEndProjectApplication : Starting MyLibraryManagmentEndProjectApplication using Java 16.0.1 on LAPTOP-B5FHCK4F with PID 9172 (C:\Users\adamk\Desktop\MyLibraryManagmentEndProject\target\classes started by adamk in C:\Users\adamk\Desktop\MyLibraryManagmentEndProject)
+2022-03-03 19:53:33.400  INFO 9172 --- [main] .MyLibraryManagmentEndProjectApplication : The following profiles are active: h2
+2022-03-03 19:53:34.329  INFO 9172 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-03 19:53:34.398  INFO 9172 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 3 JPA repository interfaces.
+2022-03-03 19:53:34.861  INFO 9172 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-03-03 19:53:34.877  INFO 9172 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-03 19:53:34.877  INFO 9172 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-03-03 19:53:34.993  INFO 9172 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-03 19:53:34.993  INFO 9172 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1544 ms
+2022-03-03 19:53:35.100  INFO 9172 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-03 19:53:35.178  INFO 9172 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-03 19:53:35.194  INFO 9172 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2022-03-03 19:53:35.316  INFO 9172 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-03 19:53:35.347  INFO 9172 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-03-03 19:53:35.447  INFO 9172 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-03 19:53:35.532  INFO 9172 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-03-03 19:53:36.033  INFO 9172 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-03 19:53:36.033  INFO 9172 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-03 19:53:36.481  WARN 9172 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-03 19:53:36.798  INFO 9172 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-03-03 19:53:36.804  INFO 9172 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@74babce8, org.springframework.security.web.context.SecurityContextPersistenceFilter@318511f0, org.springframework.security.web.header.HeaderWriterFilter@7c8f803d, org.springframework.web.filter.CorsFilter@1fab0394, org.springframework.security.web.authentication.logout.LogoutFilter@1fa796a4, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2ba08f26, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4866e0a7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5b1f0f26, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@28e24663, org.springframework.security.web.session.SessionManagementFilter@1734b1a, org.springframework.security.web.access.ExceptionTranslationFilter@416c1b0, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@70eb94d7]
+2022-03-03 19:53:36.920  WARN 9172 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-03-03 19:53:37.098  INFO 9172 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-03-03 19:53:37.105  INFO 9172 --- [main] .MyLibraryManagmentEndProjectApplication : Started MyLibraryManagmentEndProjectApplication in 4.131 seconds (JVM running for 5.051)
+2022-03-03 19:53:39.134  INFO 9172 --- [RMI TCP Connection(1)-192.168.0.5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-03 19:53:39.134  INFO 9172 --- [RMI TCP Connection(1)-192.168.0.5] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-03 19:53:39.134  INFO 9172 --- [RMI TCP Connection(1)-192.168.0.5] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2022-03-03 19:54:01.205  WARN 9172 --- [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot construct instance of `com.example.mylibrarymanagmentendproject.model.dao.Book` (although at least one Creator exists): no int/Int-argument constructor/factory method to deserialize from Number value (1); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `com.example.mylibrarymanagmentendproject.model.dao.Book` (although at least one Creator exists): no int/Int-argument constructor/factory method to deserialize from Number value (1)<EOL> at [Source: (PushbackInputStream); line: 3, column: 15] (through reference chain: com.example.mylibrarymanagmentendproject.model.dto.BookingRequest["bookId"])]
+2022-03-03 19:55:03.709  WARN 9172 --- [http-nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot construct instance of `com.example.mylibrarymanagmentendproject.model.dao.Book` (although at least one Creator exists): no int/Int-argument constructor/factory method to deserialize from Number value (1); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `com.example.mylibrarymanagmentendproject.model.dao.Book` (although at least one Creator exists): no int/Int-argument constructor/factory method to deserialize from Number value (1)<EOL> at [Source: (PushbackInputStream); line: 3, column: 15] (through reference chain: com.example.mylibrarymanagmentendproject.model.dto.BookingRequest["bookId"])]
+2022-03-03 19:58:13.184  INFO 9172 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-03-03 19:58:13.184  INFO 9172 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2022-03-03 19:58:13.184  INFO 9172 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-03-03 19:58:13.200  INFO 9172 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-03-03 19:58:19.731  INFO 8764 --- [main] .MyLibraryManagmentEndProjectApplication : Starting MyLibraryManagmentEndProjectApplication using Java 16.0.1 on LAPTOP-B5FHCK4F with PID 8764 (C:\Users\adamk\Desktop\MyLibraryManagmentEndProject\target\classes started by adamk in C:\Users\adamk\Desktop\MyLibraryManagmentEndProject)
+2022-03-03 19:58:19.732  INFO 8764 --- [main] .MyLibraryManagmentEndProjectApplication : The following profiles are active: h2
+2022-03-03 19:58:20.672  INFO 8764 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-03 19:58:20.734  INFO 8764 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 3 JPA repository interfaces.
+2022-03-03 19:58:21.205  INFO 8764 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-03-03 19:58:21.205  INFO 8764 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-03 19:58:21.205  INFO 8764 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-03-03 19:58:21.320  INFO 8764 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-03 19:58:21.320  INFO 8764 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1533 ms
+2022-03-03 19:58:21.404  INFO 8764 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-03 19:58:21.490  INFO 8764 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-03 19:58:21.505  INFO 8764 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2022-03-03 19:58:21.634  INFO 8764 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-03 19:58:21.665  INFO 8764 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-03-03 19:58:21.775  INFO 8764 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-03 19:58:21.869  INFO 8764 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-03-03 19:58:22.392  INFO 8764 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-03 19:58:22.407  INFO 8764 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-03 19:58:22.840  WARN 8764 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-03 19:58:23.156  INFO 8764 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-03-03 19:58:23.172  INFO 8764 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@74babce8, org.springframework.security.web.context.SecurityContextPersistenceFilter@318511f0, org.springframework.security.web.header.HeaderWriterFilter@7c8f803d, org.springframework.web.filter.CorsFilter@1fab0394, org.springframework.security.web.authentication.logout.LogoutFilter@1fa796a4, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2ba08f26, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4866e0a7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5b1f0f26, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@28e24663, org.springframework.security.web.session.SessionManagementFilter@1734b1a, org.springframework.security.web.access.ExceptionTranslationFilter@416c1b0, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@70eb94d7]
+2022-03-03 19:58:23.272  WARN 8764 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-03-03 19:58:23.441  INFO 8764 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-03-03 19:58:23.457  INFO 8764 --- [main] .MyLibraryManagmentEndProjectApplication : Started MyLibraryManagmentEndProjectApplication in 4.172 seconds (JVM running for 5.227)
+2022-03-03 19:58:25.473  INFO 8764 --- [RMI TCP Connection(1)-192.168.0.5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-03 19:58:25.473  INFO 8764 --- [RMI TCP Connection(1)-192.168.0.5] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-03 19:58:25.475  INFO 8764 --- [RMI TCP Connection(1)-192.168.0.5] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-03-03 19:58:29.453  WARN 8764 --- [http-nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot construct instance of `com.example.mylibrarymanagmentendproject.model.dao.Book` (although at least one Creator exists): no int/Int-argument constructor/factory method to deserialize from Number value (1); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `com.example.mylibrarymanagmentendproject.model.dao.Book` (although at least one Creator exists): no int/Int-argument constructor/factory method to deserialize from Number value (1)<EOL> at [Source: (PushbackInputStream); line: 3, column: 15] (through reference chain: com.example.mylibrarymanagmentendproject.model.dto.BookingRequest["bookId"])]
+2022-03-03 19:58:47.141  WARN 8764 --- [http-nio-8080-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot construct instance of `com.example.mylibrarymanagmentendproject.model.dao.Book` (although at least one Creator exists): no int/Int-argument constructor/factory method to deserialize from Number value (201); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `com.example.mylibrarymanagmentendproject.model.dao.Book` (although at least one Creator exists): no int/Int-argument constructor/factory method to deserialize from Number value (201)<EOL> at [Source: (PushbackInputStream); line: 3, column: 15] (through reference chain: com.example.mylibrarymanagmentendproject.model.dto.BookingRequest["bookId"])]
