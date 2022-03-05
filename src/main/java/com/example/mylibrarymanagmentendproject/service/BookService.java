@@ -1,5 +1,8 @@
 package com.example.mylibrarymanagmentendproject.service;
 import com.example.mylibrarymanagmentendproject.model.dao.Book;
+import com.example.mylibrarymanagmentendproject.model.dao.User;
+import com.example.mylibrarymanagmentendproject.model.dto.BookRequest;
+import com.example.mylibrarymanagmentendproject.model.dto.BookUpdate;
 import com.example.mylibrarymanagmentendproject.repository.BookRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -27,9 +30,8 @@ public class BookService {
     public void deleteById(Long bookId) {
         bookRepository.deleteById(bookId);
     }
-    public List<Book> getAvailability(boolean availability) {
-        return bookRepository.findByAvailability(availability);
-    }
+
+
     public List<Book> getByAuthor(String author) {
         return bookRepository.findByAuthor(author);
     }
@@ -49,7 +51,20 @@ public class BookService {
     public List<Book> findAll() {
         return bookRepository.findAll();
     }
+
+
+    public Book updateBook(BookUpdate bookUpdate, Long bookId) {
+        Book book=bookRepository.findById(bookId).orElseThrow();
+        book.setAvailable(bookUpdate.getAvailable());
+        book.setIsbn(bookUpdate.getIsbn());
+        book.setAuthor(bookUpdate.getAuthor());
+        book.setTittle(bookUpdate.getTittle());
+        return bookRepository.save(book);
+
+    }
 }
+
+
 
 
 

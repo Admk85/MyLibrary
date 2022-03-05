@@ -10,10 +10,11 @@ public interface BookRepository extends JpaRepository<Book, Long> {
 
     Optional<Book> findById(Long id);
     List<Book> findAll();
-    List<Book> findByAvailability(boolean a);
+
     List<Book> findByAuthor(String author);
 
     List<Book> findByGenre(String genre);
 
     List<Book> findByTittle(String tittle);
+
 }

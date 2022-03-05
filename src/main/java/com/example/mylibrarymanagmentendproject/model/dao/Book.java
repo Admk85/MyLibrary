@@ -27,7 +27,7 @@ public class Book {
     @Column(name = "genre")
     private String genre;
     @Column(name= "availability ")
-    private boolean availability ;
+    private String available ;
 
 
 

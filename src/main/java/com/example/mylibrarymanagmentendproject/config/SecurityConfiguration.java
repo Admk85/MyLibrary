@@ -24,20 +24,21 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         auth.userDetailsService(userDetailsServiceImpl);
     }
 
+
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                .antMatchers(HttpMethod.GET, "/booking").hasAnyRole("USER", "ADMIN", "BOOKING_USER")
-                .antMatchers(HttpMethod.POST, "/booking").hasAnyRole("USER", "ADMIN","BOOKING_USER")
-                .antMatchers(HttpMethod.POST, "/booking/*").hasAnyRole("USER","ADMIN","BOOKING_USER")
-                .antMatchers(HttpMethod.PUT, "/booking/*").hasRole("ADMIN")
-                .antMatchers(HttpMethod.DELETE, "/booking").hasAnyRole("ADMIN","BOOKING_USER")
+                .antMatchers(HttpMethod.GET, "/booking").hasAnyRole("USER", "ADMIN")
+                .antMatchers(HttpMethod.POST, "/booking").hasAnyRole("USER", "ADMIN")
+                .antMatchers(HttpMethod.POST, "/booking/*").hasAnyRole("USER","ADMIN")
+                .antMatchers(HttpMethod.PUT, "/booking/**").hasRole("ADMIN")
+                .antMatchers(HttpMethod.DELETE, "/booking").hasRole("ADMIN")
                 .antMatchers(HttpMethod.GET, "/user/").hasRole("ADMIN")
                 .antMatchers(HttpMethod.POST, "/user").permitAll()
                 .antMatchers(HttpMethod.DELETE, "/user").hasRole("ADMIN")
-                .antMatchers(HttpMethod.PUT, "/user/*").hasAnyRole("ADMIN","USER_USER")
+                .antMatchers(HttpMethod.PUT, "/user/**").hasAnyRole("ADMIN","USER")
                 .antMatchers(HttpMethod.GET, "/books").hasRole("ADMIN")
-                .antMatchers(HttpMethod.GET, "/books/*").hasAnyRole("USER","ADMIN")
+                .antMatchers(HttpMethod.GET, "/books/**").hasAnyRole("USER","ADMIN")
                 .antMatchers(HttpMethod.POST, "/books").hasRole("ADMIN")
                 .antMatchers(HttpMethod.PUT, "/books").hasRole("ADMIN")
                 .antMatchers(HttpMethod.DELETE, "/books").hasRole("ADMIN")

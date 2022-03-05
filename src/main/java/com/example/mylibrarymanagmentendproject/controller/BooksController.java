@@ -1,8 +1,14 @@
 package com.example.mylibrarymanagmentendproject.controller;
 import com.example.mylibrarymanagmentendproject.model.dao.Book;
+import com.example.mylibrarymanagmentendproject.model.dao.User;
+import com.example.mylibrarymanagmentendproject.model.dto.BookRequest;
+import com.example.mylibrarymanagmentendproject.model.dto.BookUpdate;
+import com.example.mylibrarymanagmentendproject.model.dto.BookingRequest;
 import com.example.mylibrarymanagmentendproject.service.BookService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -27,6 +33,13 @@ public class BooksController {
         bookService.save(books);
     }
 
+
+    @RequestMapping(value = "/update/{id}", method= RequestMethod.PUT)
+    public ResponseEntity<Book> updateBook(@RequestBody BookUpdate update, @PathVariable("id") Long id)   {
+        Book updateBook =  bookService.updateBook(update, id);
+        return new ResponseEntity<>(updateBook, HttpStatus.OK);
+    }
+
     @RequestMapping(value = "/count", method = RequestMethod.GET)
     public long getCount() {
         return bookService.getCount();
@@ -37,10 +50,6 @@ public class BooksController {
         bookService.deleteById(bookId);
     }
 
-    @RequestMapping(value = "/availability/{id}", method = RequestMethod.GET)
-    public List<Book> getAvailability( @PathVariable("id")@RequestAttribute("availability") boolean availability) {
-        return bookService.getAvailability(availability);
-    }
     @RequestMapping(value = "/author/{author}", method = RequestMethod.GET)
     public List<Book> getByAuthor(@PathVariable("author")String  author) {
         return bookService.getByAuthor(author);

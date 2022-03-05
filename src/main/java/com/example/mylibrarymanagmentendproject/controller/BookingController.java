@@ -32,7 +32,7 @@ public class BookingController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    @RequestMapping(value = "update/{bookingId}", method= RequestMethod.PUT)
+    @RequestMapping(value = "/update/{bookingId}", method= RequestMethod.PUT)
     public ResponseEntity<BookingOrder> updateBooking(@RequestBody BookingRequest bookingRequest, @PathVariable("bookingId") Long bookId)   {
         BookingOrder updateOrder =  service.updateBooking(bookingRequest, bookId);
         return new ResponseEntity<>(updateOrder, HttpStatus.OK);

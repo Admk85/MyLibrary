@@ -25,6 +25,8 @@ public class BookingOrder {
     private Date bookingStartDate;
     @Column(name = "bookingEndDate")
     private Date bookingEndDate;
+    @Column(name="returned")
+    private String returned;
 
 
 }

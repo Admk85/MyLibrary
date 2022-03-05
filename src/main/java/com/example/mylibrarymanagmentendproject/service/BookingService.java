@@ -9,6 +9,7 @@ import com.example.mylibrarymanagmentendproject.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 
 
 @Service
@@ -40,10 +41,7 @@ public class BookingService {
         );
         bookingOrder.setBookingStartDate(bookingRequest.getBookingStartDate());
         bookingOrder.setBookingEndDate( bookingRequest.getBookingEndDate());
-
-
         return repo.save(bookingOrder);
-
     }
 
     public BookingOrder updateBooking(BookingRequest bookingRequest, Long bookId) {
@@ -57,10 +55,11 @@ public class BookingService {
         );
         bookingOrder.setBookingStartDate(bookingRequest.getBookingStartDate());
         bookingOrder.setBookingEndDate( bookingRequest.getBookingEndDate());
+        bookingOrder.setReturned(bookingRequest.getReturned());
         return repo.save(bookingOrder);
-
     }
-}
+    }
+
 
 
    

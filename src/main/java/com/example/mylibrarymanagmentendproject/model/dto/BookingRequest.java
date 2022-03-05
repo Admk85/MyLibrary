@@ -13,4 +13,6 @@ public class BookingRequest {
     private Date bookingStartDate;
     private Date bookingEndDate;
     private Long bookId;
+    private String  returned;
+
 }

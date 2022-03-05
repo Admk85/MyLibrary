@@ -11,12 +11,11 @@ import lombok.Setter;
 @Setter
 @Builder
 public class BookResponse {
-    private String userName;
     private Long bookId;
     private String isbn;
     private String tittle;
     private String author;
-    public boolean isAvailability;
+    public String available;
 
 
 }
