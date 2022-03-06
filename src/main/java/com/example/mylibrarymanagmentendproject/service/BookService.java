@@ -62,6 +62,11 @@ public class BookService {
         return bookRepository.save(book);
 
     }
+
+
+    public List<Book> findByAvailable(String available) {
+        return bookRepository.findByAvailable(available);
+    }
 }
 
 

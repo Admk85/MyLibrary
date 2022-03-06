@@ -17,8 +17,6 @@ import java.util.Map;
 @Configuration
 public class AppConfig {
 
-   
-
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();

@@ -26,7 +26,7 @@ public class Book {
     private String tittle;
     @Column(name = "genre")
     private String genre;
-    @Column(name= "availability ")
+    @Column(name= "available ")
     private String available ;
 
 
