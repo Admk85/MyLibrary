@@ -17,17 +17,7 @@ import java.util.Map;
 @Configuration
 public class AppConfig {
 
-    @Bean
-    public Map<Long, Book> initialData() {
-        HashMap<Long, Book> map = new HashMap();
-        Book b1 = new Book(1L, 2, "594837583", "Steven Erikson", "Władca Ciemności"
-                , "fantasy", "true" );
-        Book b2 = new Book(2L, 1, "243564465", "Alfred Hitchcock", "Ptaki",
-                "horror", "true");
-        map.put(1L, b1);
-        map.put(2L, b2);
-        return map;
-    }
+   
 
     @Bean
     public PasswordEncoder passwordEncoder() {
