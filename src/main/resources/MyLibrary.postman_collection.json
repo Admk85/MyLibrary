@@ -1,0 +1,606 @@
+{
+	"info": {
+		"_postman_id": "2edd3701-8a69-4734-b499-7d3ecd76cabf",
+		"name": "MyLibrary",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "add-user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pesel\":\"5255254845\",\r\n    \"birthday\":\"2000-01-05\",\r\n    \"userName\": \"henry\",\r\n    \"firstname\": \"wojciech\",\r\n    \"surname\": \"Lichacki\",\r\n    \"email\": \"arg@gmail.com\",\r\n    \"password\":\"123456\"\r\n   \r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/addUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"addUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteUser",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/user/deleteUser/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"deleteUser",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findUser",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Mortal",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "ADMIN",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/findUser/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"findUser",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateUser",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "henry",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"userId\": 2,\r\n    \"userName\": \"henry\",\r\n    \"password\": \"$2a$10$O.GobGCFEvQnxE6Dd8JvF.ly7Rkp0ZtDV9ttbevKEpfwBgVER2Zxi\",\r\n    \"firstname\": \"Andrzej\",\r\n    \"surname\": \"Ikras\",\r\n    \"town\": null,\r\n    \"postcode\": null,\r\n    \"address\": null,\r\n    \"telephone\": null,\r\n    \"email\": \"ikra@gmail.com\",\r\n    \"birthday\": \"2000-01-09\",\r\n    \"registerDate\": \"2022-03-02T13:55:51.8697282\",\r\n    \"modifyDate\": \"2022-03-02T13:55:51.8697282\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/update/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"update",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add-Book",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "ADMIN",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "Mortal",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"bookId\":4,\r\n\"copies\": 2,\r\n\"isbn\":\"978-83-97791\",\r\n\"author\":\"Jan gostekisas\",\r\n\"tittle\":\"wojenne rewolucje21\",\r\n\"genre\":\"sensacyjny\",\r\n\"availability\":true\r\n\r\n\r\n\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/books/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "countBook",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/books/count",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books",
+						"count"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findAllBooks",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Mortal",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "ADMIN",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "copieCounts",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Mortal",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "ADMIN",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/books/copy_counts/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books",
+						"copy_counts",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteBook",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "ADMIN",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "Mortal",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/books/delete/200",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books",
+						"delete",
+						"200"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "genre",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "ADMIN",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "Mortal",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/books/genre/sensacyjny",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books",
+						"genre",
+						"sensacyjny"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tittle",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "ADMIN",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "Mortal",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/books/tittle/wojenne rewolucje21",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books",
+						"tittle",
+						"wojenne rewolucje21"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "author",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "ADMIN",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "Mortal",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/books/author/Jan gostekisas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books",
+						"author",
+						"Jan gostekisas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getEmailUser",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/findEmail/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"findEmail",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SaveBooking",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "henry",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \r\n    \"bookId\":4,\r\n   \"userCardId\": \"d1768d1b-c1dd-4c1a-9943-b255a81892b6\",\r\n    \"bookingStartDate\": \"2020-01-01\",\r\n    \"bookingEndDate\": \"2020-01-02\"\r\n\r\n\r\n\r\n  \r\n  \r\n}\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/booking/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"booking",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete-Booking",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n  \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/booking/deleteBooking/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"booking",
+						"deleteBooking",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateBooking",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Mortal",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "ADMIN",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bookId\": 4,\r\n    \"userCardId\": \"d1768d1b-c1dd-4c1a-9943-b255a81892b6\",\r\n   \"bookingStartDate\": \"2020-01-01\",\r\n    \"bookingEndDate\": \"2021-01-19\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/booking/update/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"booking",
+						"update",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
