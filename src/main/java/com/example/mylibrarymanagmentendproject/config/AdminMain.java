@@ -1,7 +1,10 @@
 package com.example.mylibrarymanagmentendproject.config;
 
+import com.example.mylibrarymanagmentendproject.model.dao.Book;
 import com.example.mylibrarymanagmentendproject.model.dao.User;
 import com.example.mylibrarymanagmentendproject.repository.UserRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.core.annotation.Order;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -19,10 +22,11 @@ public class AdminMain implements CommandLineRunner  {
     }
 
     @Override
-    public void run(String... args) throws Exception {
+    public void run(String... args) {
         User users = new User();
         users.setUserName("ADMIN");
         users.setPassword(passwordEncoder.encode("Mortal"));
         userRepository.save(users);
     }
+
 }

@@ -70,7 +70,7 @@ public class BooksController {
             return bookService.getBookCopyCounts(bookId);
         }
     }
-
+    //?available=true/false TRUE FALSE
     @RequestMapping(value = "/available/{available}", method = RequestMethod.GET)
     public List<Book> findByAvailable( @PathVariable("available") String  available) {
         return bookService.findByAvailable(available);

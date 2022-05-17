@@ -21,7 +21,7 @@ public class UserService {
     private final UserRepository userRepository;
     private final PasswordEncoder encoder;
 
-    public  User addUser(UserRequest userRequest) {
+    public User addUser(UserRequest userRequest) {
         User user = new User();
         userRequest.setPesel(userRequest.getPesel());
         user.setUserName(userRequest.getUserName());
@@ -30,11 +30,11 @@ public class UserService {
         user.setFirstname(userRequest.getFirstname());
         user.setSurname(userRequest.getSurname());
         user.setUserCardId(UUID.randomUUID().toString());
-        LocalDateTime now= LocalDateTime.now();
+        LocalDateTime now = LocalDateTime.now();
         user.setBirthday(java.sql.Date.valueOf(userRequest.getBirthday()));
         user.setRegisterDate(now);
         user.setModifyDate(now);
-         return  userRepository.save(user);
+        return userRepository.save(user);
     }
 
     public void deleteUser(Long UserId) {
@@ -45,14 +45,12 @@ public class UserService {
         return userRepository.findByEmail(email);
     }
 
-public User findUserById(Long id){
-    return userRepository.findByUserId(id).orElseThrow(()-> new UsernameNotFoundException("User by id"+ id+"was not found"));
-
-
+    public User findUserById(Long id) {
+        return userRepository.findByUserId(id).orElseThrow(() -> new UsernameNotFoundException("User by id" + id + "was not found"));
     }
 
     public User updateUser(User modification, Long userId) {
-        User user=userRepository.findById(userId).orElseThrow();
+        User user = userRepository.findById(userId).orElseThrow();
         user.setUserName(modification.getUserName());
         user.setPassword(encoder.encode(modification.getPassword()));
         user.setEmail(modification.getEmail());

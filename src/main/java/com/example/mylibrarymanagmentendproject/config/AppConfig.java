@@ -2,6 +2,7 @@ package com.example.mylibrarymanagmentendproject.config;
 
 import com.example.mylibrarymanagmentendproject.model.dao.Book;
 import org.springframework.boot.web.client.RestTemplateBuilder;
+import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpHeaders;
@@ -28,4 +29,5 @@ public class AppConfig {
                 .defaultHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
                 .build();
     }
+
 }

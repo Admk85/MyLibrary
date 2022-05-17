@@ -6,6 +6,8 @@ import com.example.mylibrarymanagmentendproject.model.dao.User;
 import com.example.mylibrarymanagmentendproject.model.dto.BookResponse;
 import com.example.mylibrarymanagmentendproject.repository.BookRepository;
 import com.example.mylibrarymanagmentendproject.repository.UserRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.CommandLineRunner;
@@ -22,42 +24,17 @@ import java.util.Collections;
 @Component
 @Order(2)
 public class BookDataInitialize implements CommandLineRunner {
-
-    @Autowired
-    @Qualifier("restTemplate")
-    private RestTemplate restTemplate;
-    @Autowired
-    private UserRepository userRepository;
+    private static final Logger logger = LoggerFactory.getLogger(Book.class);
     @Autowired
     private BookRepository bookRepository;
-
     @Override
-    public void run(String... args) throws Exception {
+    public void run(String... args) {
+        bookRepository.save(new Book(1L, 1, "5624558554", "Janek Muzykant", "wojenne rewolucje00",
+                "sensacyjny", "true"));
 
-        String sourceUrl = "https://jsonplaceholder.typicode.com/todos";
-        ResponseEntity<BookResponse[]> response = restTemplate.exchange(
-                sourceUrl,
-                HttpMethod.GET,
-                null,
-                BookResponse[].class,
-                Collections.emptyMap()
-        );
-        BookResponse[] body = response.getBody();
-        body = restTemplate.getForObject(sourceUrl, BookResponse[].class, Collections.emptyMap());
 
-        User admin =  userRepository.findByUserName("ADMIN").orElseThrow();
-        Arrays.stream(body)
-                .map(x -> {
-                    Book book = new Book();
-                    book.setIsbn(x.getIsbn());
-                    book.setTittle(x.getTittle());
-                    book.setAuthor(x.getAuthor());
-                    book.setAvailable(x.getAvailable());
-                    book.setBookId(x.getBookId());
-                    return book;
-
-                })
-                .forEach(x -> bookRepository.save(x));
+        bookRepository.findAll().forEach((book) -> {
+            logger.info("{}", book);
+        });
     }
-
 }
